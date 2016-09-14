@@ -2,8 +2,8 @@
 
 import {BaseCharacter} from "./base";
 
-export class Barbarian extends BaseCharacter {
-	className = 'Barbarian';
+export class Sorcerer extends BaseCharacter {
+	className = 'Sorcerer';
 
 	constructor() {
 		super();

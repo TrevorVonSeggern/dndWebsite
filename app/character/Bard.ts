@@ -8,23 +8,35 @@ export class Bard extends BaseCharacter {
 	constructor() {
 		super();
 
-		this.baseHealth = 10;
-		this.healthGrowth = '1d12';
-		this.armor = 'light armor, heavy armor, and shields';
-		this.weapons = 'Simple and martial';
-		this.tools = 'none';
-		this.statPriorityOne = 'Strength';
-		this.statPriorityTwo = 'Constitution';
-		this.baseCantripAllowance = 0;
-		this.baseCantripLocation = '';
-		this.savingThrows = ['Strength', 'Constitution'];
+		this.baseHealth = 8;
+		this.healthGrowth = '1d8';
+		this.armor = 'light armor';
+		this.weapons = 'Simple, hand crossbows, short/long swords and rapiers';
+		this.tools = 'Three musical instruments of your choice';
+		this.statPriorityOne = 'Charisma';
+		this.statPriorityTwo = 'Dexterity';
+		this.baseCantripAllowance = 2;
+		this.baseCantripLocation = 'Bard spell list';
+		this.savingThrows = ['Dexterity', 'Charisma'];
 		this.baseSkillAllowance = 2;
 		this.baseAvailableSkills = [
+			'Acrobatics',
 			'Animal Handling',
+			'Arcana',
 			'Athletics',
+			'Deception',
+			'History',
+			'Insight',
 			'Intimidation',
+			'Investigation',
+			'Medicine',
 			'Nature',
 			'Perception',
+			'Performance',
+			'Persuasion',
+			'Religion',
+			'Sleight of Hand',
+			'Stealth',
 			'Survival'
 		];
 	}

@@ -3,6 +3,16 @@
 import {Barbarian} from "../../../character/Barbarian";
 import {Bard} from "../../../character/Bard";
 import {BaseCharacter} from "../../../character/base";
+import {Cleric} from "../../../character/Cleric";
+import {Druid} from "../../../character/Druid";
+import {Fighter} from "../../../character/Fighter";
+import {Monk} from "../../../character/Monk";
+import {Paladin} from "../../../character/Paladin";
+import {Ranger} from "../../../character/Ranger";
+import {Rogue} from "../../../character/Rogue";
+import {Sorcerer} from "../../../character/Sorcerer";
+import {Warlock} from "../../../character/Warlock";
+import {Wizard} from "../../../character/Wizard";
 
 export var Controller = function (scope) {
 	var vm = this;
@@ -11,6 +21,16 @@ export var Controller = function (scope) {
 	var list = vm.list;
 	list['Barbarian'] = new Barbarian();
 	list['Bard'] = new Bard();
+	list['Cleric'] = new Cleric();
+	list['Druid'] = new Druid();
+	list['Fighter'] = new Fighter();
+	list['Monk'] = new Monk();
+	list['Paladin'] = new Paladin();
+	list['Ranger'] = new Ranger();
+	list['Rogue'] = new Rogue();
+	list['Sorcerer'] = new Sorcerer();
+	list['Warlock'] = new Warlock();
+	list['Wizard'] = new Wizard();
 
 	vm.characterClass = 'Barbarian';
 	vm.character = list['Barbarian'];
@@ -23,34 +43,6 @@ export var Controller = function (scope) {
 		else {
 			vm.character = new BaseCharacter();
 		}
-		// if (vm.characterClass == 'Bard') {
-		// 	vm.baseHealth = 8;
-		// 	vm.healthGrowth = '1d8';
-		// 	vm.armor = 'light armor';
-		// 	vm.weapons = 'Simple, hand crossbows, short/long swords and rapiers';
-		// 	vm.tools = 'Three musical instruments of your choice';
-		// 	vm.statPriorityOne = 'Charisma';
-		// 	vm.statPriorityTwo = 'Dexterity';
-		// 	vm.baseCantrips = 2;
-		// 	vm.baseCantripLocation = 'Bard spell list';
-		// 	vm.savingThrows = ['Dexterity', 'Charisma'];
-		// 	vm.baseSkillAllowence = 2;
-		// 	vm.baseAvailableSkills = [
-		// 		''
-		// 	];
-		// }
-		// else if (vm.characterClass == 'Bard') {
-		// 	vm.baseHealth = 8;
-		// 	vm.healthGrowth = '1d8';
-		// 	vm.armor = 'light armor';
-		// 	vm.weapons = 'Simple, hand crossbows, short/long swords and rapiers';
-		// 	vm.tools = 'Three musical instruments of your choice';
-		// 	vm.statPriorityOne = 'Charisma';
-		// 	vm.statPriorityTwo = 'Dexterity';
-		// 	vm.baseCantrips = 0;
-		// 	vm.savingThrows = ['Strength', 'Constitution'];
-		// }
-
 	};
 
 	scope.$watch('vm.characterClass', function (ov, nv) {

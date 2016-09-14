@@ -4,6 +4,7 @@ export class BaseCharacter {
 	className = '';
 
 	baseHealth = 0;
+	baseHealthLvlOneModifier = 'Constitution'; // standard for most characters
 	health = 0;
 	healthGrowth = '';
 

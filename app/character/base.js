@@ -3,6 +3,7 @@ var BaseCharacter = (function () {
     function BaseCharacter() {
         this.className = '';
         this.baseHealth = 0;
+        this.baseHealthLvlOneModifier = 'Constitution';
         this.health = 0;
         this.healthGrowth = '';
         this.statPriorityOne = '';
