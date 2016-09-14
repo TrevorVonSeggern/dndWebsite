@@ -1,0 +1,56 @@
+<H1>Dnd Character Creator - 5 Edition</H1>
+
+<h4>Tool to help create a and manage a dnd character.</h4>
+<p>This tool is intended to help beginners create their first character and walk people through the process of character
+    creation.</p>
+
+<p>The #1 rule for dnd is to create something that you can be excited about and have fun playing, not to make the mose
+    over-powered character you can create. After all - the goal of the game is to have fun, not to gain advantages over
+    your team mates.</p>
+
+<p>Choose your class first. This will help decide your characters race. I choose to do this step first because a
+    characters class is a bigger deciding factor to the style of play your character will follow.</p>
+<p>Class list:</p>
+<ul>
+    <li>Barbarian - Run at people</li>
+    <li>Bard - Help People fight</li>
+    <li>Cleric</li>
+    <li>Druid - Tree Hugger/Zoo Summoner</li>
+    <li>Fighter - Average Soldier with average skills</li>
+    <li>Monk - Martial arts/Spiritual person</li>
+    <li>Paladin - Death to all Evil</li>
+    <li>Ranger - Robin hood (shoot at people)</li>
+    <li>Rogue - Criminal, basic fiend</li>
+    <li>Sorcerer - Magic from bloodline</li>
+    <li>Warlock - Magic from deity</li>
+    <li>Wizard - Magic from books</li>
+</ul>
+<div>
+    <div ng-if="vm.class">
+        <p><b>Base health: </b>{{vm.character.health}}</p>
+        <p><b>Health dice: </b>{{vm.healthGrowth}} - (sleep regen roll)</p>
+        <p><b>Armor: </b>{{vm.armor}}</p>
+        <p><b>Weapons: </b>{{vm.weapons}}</p>
+    </div>
+    <span>
+        <b>Character class - </b>
+        <select ng-model="vm.class">
+            <option value="Barbarian">Barbarian</option>
+            <option value="Bard">Bard</option>
+            <option>Cleric</option>
+            <option>Druid</option>
+            <option>Fighter</option>
+            <option>Monk</option>
+            <option>Paladin</option>
+            <option>Ranger</option>
+            <option>Rogue</option>
+            <option>Sorcerer</option>
+            <option>Warlock</option>
+            <option>Wizard</option>
+        </select>
+    </span>
+    <div ng-if="vm.class">
+        <p><b>Stat Priorities: </b>#1 {{vm.statPriorityOne}}, #2 {{vm.statPriorityOne}}</p>
+        <h4>Class Features</h4>
+    </div>
+</div>
