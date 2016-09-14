@@ -28,4 +28,8 @@ export class BaseCharacter {
 	baseConstitution = 0;
 	constitution = 0;
 	constitutionModifier = 0;
+
+	calculateModifiers() {
+		this.health = this.baseHealth;
+	}
 }

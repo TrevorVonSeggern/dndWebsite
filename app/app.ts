@@ -1,16 +1,8 @@
 // Created by trevor on 9/13/16.
 
-'use strict';
+import * as angular from 'angular'
 
-// import 'bower_components/angular/angular.js'
-//
-// import 'character/Barbarian';
-// import 'character/Bard';
-//
-// import 'components/character/create/module'
-// import 'components/character/create/controller'
-// import 'components/character/create/directive'
+import {CreateCharacterModule} from "./components/character/create/module";
 
 // Declare app level module which depends on views, and components
-var angular;
-angular.module('myApp', ['dnd']);
+angular.module('myApp', [CreateCharacterModule.name]);

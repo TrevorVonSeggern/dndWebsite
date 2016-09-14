@@ -7,17 +7,21 @@
 <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My AngularJS App</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="app.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <title>DnD 5e Handbook</title>
+
 </head>
+
 <body>
 
 <!--[if lt IE 7]>
@@ -30,35 +34,46 @@
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
 
-<!--<script src="bower_components/system.js/dist/system.js"></script>-->
-<!--<script>-->
-    <!--// set our baseURL reference path-->
-    <!--SystemJS.config({-->
-        <!--"defaultJSExtensions": true-->
-    <!--});-->
+<script src="bower_components/system.js/dist/system.js"></script>
+<script>
+    // set our baseURL reference path
+    SystemJS.config({
+        "defaultJSExtensions": true,
+        map: {
+            'angular': 'bower_components/angular/angular'
+        },
+        meta: {
+            // meaning [baseURL]/vendor/angular.js when no other rules are present
+            // path is normalized using map and paths configuration
+            'angular': {
+                format: 'global', // load this module as a global
+                exports: 'angular', // the global property to take as the module value
+                deps: [
+                ]
+            }
+        }
+    });
 
-    <!--// loads /js/main.js-->
-    <!--SystemJS.import('app.js');-->
-<!--</script>-->
+    // loads /js/main.js
+    SystemJS.import('app.js');
+</script>
 
-<script src="components/character/create/module.js"></script>
+<!--<script src="components/character/create/module.js"></script>-->
 
-<script src="character/base.js"></script>
-<script src="character/Barbarian.js"></script>
-<script src="character/Bard.js"></script>
+<!--<script src="character/base.js"></script>-->
+<!--<script src="character/Barbarian.js"></script>-->
+<!--<script src="character/Bard.js"></script>-->
 
 
-<script src="components/character/create/controller.js"></script>
-<script src="components/character/create/directive.js"></script>
-<script src="view1/view1.js"></script>
-<script src="view2/view2.js"></script>
-<script src="components/version/version.js"></script>
-<script src="components/version/version-directive.js"></script>
-<script src="components/version/interpolate-filter.js"></script>
+<!--<script src="components/character/create/controller.js"></script>-->
+<!--<script src="components/character/create/directive.js"></script>-->
+<!--<script src="view1/view1.js"></script>-->
+<!--<script src="view2/view2.js"></script>-->
+<!--<script src="components/version/version.js"></script>-->
+<!--<script src="components/version/version-directive.js"></script>-->
+<!--<script src="components/version/interpolate-filter.js"></script>-->
 
-<script src="app.js"></script>
+<!--<script src="app.js"></script>-->
 </body>
 </html>

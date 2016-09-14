@@ -1,4 +1,3 @@
-// Created by trevor on 9/13/16.
 "use strict";
 var BaseCharacter = (function () {
     function BaseCharacter() {
@@ -24,6 +23,9 @@ var BaseCharacter = (function () {
         this.constitution = 0;
         this.constitutionModifier = 0;
     }
+    BaseCharacter.prototype.calculateModifiers = function () {
+        this.health = this.baseHealth;
+    };
     return BaseCharacter;
 }());
 exports.BaseCharacter = BaseCharacter;
