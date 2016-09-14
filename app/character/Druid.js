@@ -10,23 +10,26 @@ var Druid = (function (_super) {
     function Druid() {
         _super.call(this);
         this.className = 'Druid';
-        this.baseHealth = 10;
-        this.healthGrowth = '1d12';
-        this.armor = 'light armor, heavy armor, and shields';
-        this.weapons = 'Simple and martial';
-        this.tools = 'none';
-        this.statPriorityOne = 'Strength';
+        this.baseHealth = 8;
+        this.healthRecovery = '1d8';
+        this.armor = 'light armor, medium armor, and shields. Nothing metal.';
+        this.weapons = 'Clubs, daggers, darts, javelins, maces';
+        this.tools = 'Herbalism kit';
+        this.statPriorityOne = 'Wisdom';
         this.statPriorityTwo = 'Constitution';
         this.baseCantripAllowance = 0;
         this.baseCantripLocation = '';
-        this.savingThrows = ['Strength', 'Constitution'];
+        this.savingThrows = ['Intelligence', 'Wisdom'];
         this.baseSkillAllowance = 2;
         this.baseAvailableSkills = [
-            'Animal Handling',
-            'Athletics',
-            'Intimidation',
+            'Arcana',
+            'Animal',
+            'Handling',
+            'Insight',
+            'Medicine',
             'Nature',
             'Perception',
+            'Religion',
             'Survival'
         ];
     }

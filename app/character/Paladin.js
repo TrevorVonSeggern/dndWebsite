@@ -11,7 +11,7 @@ var Paladin = (function (_super) {
         _super.call(this);
         this.className = 'Paladin';
         this.baseHealth = 10;
-        this.healthGrowth = '1d12';
+        this.healthRecovery = '1d12';
         this.armor = 'light armor, heavy armor, and shields';
         this.weapons = 'Simple and martial';
         this.tools = 'none';

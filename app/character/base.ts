@@ -1,31 +1,33 @@
 // Created by trevor on 9/13/16.
 
 export class BaseCharacter {
-	className = '';
+	className: string = '';
+	subClassName: string = '';
+	subClasses: string[] = [];
 
 	baseHealth = 0;
-	baseHealthLvlOneModifier = 'Constitution'; // standard for most characters
+	baseHealthLvlOneModifier: string = 'Constitution'; // standard for most characters
 	health = 0;
-	healthGrowth = '';
+	healthRecovery: string = '';
 
-	statPriorityOne = '';
-	statPriorityTwo = '';
+	statPriorityOne: string = '';
+	statPriorityTwo: string = '';
 
 	baseCantripAllowance = 0;
 	baseCantrips = [];
-	baseCantripLocation = '';
+	baseCantripLocation: string = '';
 
 	baseSpellAllowance = 0;
 	baseSpells = [];
-	baseSpellLocation = '';
+	baseSpellLocation: string = '';
 
 	savingThrows = [];
 	baseAvailableSkills = [];
 	baseSkillAllowance = 0;
 
-	armor = 'none';
-	weapons = 'none';
-	tools = 'none';
+	armor: string = 'none';
+	weapons: string = 'none';
+	tools: string = 'none';
 	baseConstitution = 0;
 	constitution = 0;
 	constitutionModifier = 0;

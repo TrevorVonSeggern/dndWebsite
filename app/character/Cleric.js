@@ -10,24 +10,31 @@ var Cleric = (function (_super) {
     function Cleric() {
         _super.call(this);
         this.className = 'Cleric';
-        this.baseHealth = 10;
-        this.healthGrowth = '1d12';
-        this.armor = 'light armor, heavy armor, and shields';
-        this.weapons = 'Simple and martial';
+        this.baseHealth = 8;
+        this.healthRecovery = '1d8';
+        this.armor = 'light armor, medium armor, and shields';
+        this.weapons = 'all simple weapons';
         this.tools = 'none';
-        this.statPriorityOne = 'Strength';
-        this.statPriorityTwo = 'Constitution';
-        this.baseCantripAllowance = 0;
-        this.baseCantripLocation = '';
-        this.savingThrows = ['Strength', 'Constitution'];
+        this.statPriorityOne = 'Wisdom';
+        this.statPriorityTwo = 'Strength/Constitution';
+        this.baseCantripAllowance = 3;
+        this.baseCantripLocation = 'Cleric Spell List';
+        this.savingThrows = ['Wisdom', 'Charisma'];
         this.baseSkillAllowance = 2;
         this.baseAvailableSkills = [
-            'Animal Handling',
-            'Athletics',
-            'Intimidation',
-            'Nature',
-            'Perception',
-            'Survival'
+            'History',
+            'Insight',
+            'Medicine',
+            'Persuasion',
+            'Religion'
+        ];
+        this.subClasses = [
+            'Knowledge',
+            'Life',
+            'Light',
+            'Tempest',
+            'Trickery',
+            'War'
         ];
     }
     return Cleric;

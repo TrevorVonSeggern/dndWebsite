@@ -39,6 +39,16 @@ exports.Controller = function (scope) {
             vm.character = new base_1.BaseCharacter();
         }
     };
+    vm.models = {
+        selected: null,
+        lists: { "A": [] }
+    };
+    vm.models.lists.A.push({ label: "Strength" });
+    vm.models.lists.A.push({ label: "Constitution" });
+    vm.models.lists.A.push({ label: "Dexterity" });
+    vm.models.lists.A.push({ label: "Intelligence" });
+    vm.models.lists.A.push({ label: "Wisdom" });
+    vm.models.lists.A.push({ label: "Charisma" });
     scope.$watch('vm.characterClass', function (ov, nv) {
         vm.calculateClass();
     });

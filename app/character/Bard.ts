@@ -9,14 +9,12 @@ export class Bard extends BaseCharacter {
 		super();
 
 		this.baseHealth = 8;
-		this.healthGrowth = '1d8';
+		this.healthRecovery = '1d8';
 		this.armor = 'light armor';
 		this.weapons = 'Simple, hand crossbows, short/long swords and rapiers';
 		this.tools = 'Three musical instruments of your choice';
 		this.statPriorityOne = 'Charisma';
 		this.statPriorityTwo = 'Dexterity';
-		this.baseCantripAllowance = 2;
-		this.baseCantripLocation = 'Bard spell list';
 		this.savingThrows = ['Dexterity', 'Charisma'];
 		this.baseSkillAllowance = 2;
 		this.baseAvailableSkills = [
@@ -39,5 +37,11 @@ export class Bard extends BaseCharacter {
 			'Stealth',
 			'Survival'
 		];
+
+		this.baseCantripAllowance = 2;
+		this.baseCantripLocation = 'Bard spell list';
+
+		this.baseSpellAllowance = 4;
+		this.baseSpellLocation = 'Bard spell list'
 	}
 }

@@ -11,7 +11,7 @@ var Barbarian = (function (_super) {
         _super.call(this);
         this.className = 'Barbarian';
         this.baseHealth = 10;
-        this.healthGrowth = '1d12';
+        this.healthRecovery = '1d12';
         this.armor = 'light armor, heavy armor, and shields';
         this.weapons = 'Simple and martial';
         this.tools = 'none';
@@ -28,6 +28,10 @@ var Barbarian = (function (_super) {
             'Nature',
             'Perception',
             'Survival'
+        ];
+        this.subClasses = [
+            'Path of the Berserker',
+            'Path of the Totem Warrior'
         ];
     }
     return Barbarian;

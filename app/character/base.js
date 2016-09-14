@@ -2,10 +2,12 @@
 var BaseCharacter = (function () {
     function BaseCharacter() {
         this.className = '';
+        this.subClassName = '';
+        this.subClasses = [];
         this.baseHealth = 0;
         this.baseHealthLvlOneModifier = 'Constitution';
         this.health = 0;
-        this.healthGrowth = '';
+        this.healthRecovery = '';
         this.statPriorityOne = '';
         this.statPriorityTwo = '';
         this.baseCantripAllowance = 0;

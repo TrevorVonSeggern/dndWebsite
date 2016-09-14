@@ -14,6 +14,8 @@ import {Sorcerer} from "../../../character/Sorcerer";
 import {Warlock} from "../../../character/Warlock";
 import {Wizard} from "../../../character/Wizard";
 
+import * as angular from 'angular';
+
 export var Controller = function (scope) {
 	var vm = this;
 
@@ -44,6 +46,21 @@ export var Controller = function (scope) {
 			vm.character = new BaseCharacter();
 		}
 	};
+
+
+	vm.models = {
+		selected: null,
+		lists: {"A": []}
+	};
+
+	// Generate initial model
+	vm.models.lists.A.push({label: "Strength"});
+	vm.models.lists.A.push({label: "Constitution"});
+	vm.models.lists.A.push({label: "Dexterity"});
+	vm.models.lists.A.push({label: "Intelligence"});
+	vm.models.lists.A.push({label: "Wisdom"});
+	vm.models.lists.A.push({label: "Charisma"});
+
 
 	scope.$watch('vm.characterClass', function (ov, nv) {
 		vm.calculateClass();

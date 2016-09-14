@@ -13,9 +13,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="app.css">
+
+    <link rel="stylesheet" href="components/character/create/style.css">
+
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 
     <title>DnD 5e Handbook</title>
@@ -41,7 +45,8 @@
     SystemJS.config({
         "defaultJSExtensions": true,
         map: {
-            'angular': 'bower_components/angular/angular'
+            'angular': 'bower_components/angular/angular',
+            'angular-dnd': 'bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists'
         },
         meta: {
             // meaning [baseURL]/vendor/angular.js when no other rules are present
@@ -49,8 +54,7 @@
             'angular': {
                 format: 'global', // load this module as a global
                 exports: 'angular', // the global property to take as the module value
-                deps: [
-                ]
+                deps: []
             }
         }
     });
